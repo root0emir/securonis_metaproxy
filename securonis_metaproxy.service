@@ -1,0 +1,13 @@
+[Unit]
+Description=Securonis Metaproxy
+After=network.target
+
+[Service]
+Type=simple
+User=subgraph-metaproxy
+ExecStart=/sbin/securonis_metaproxy -c /etc/securonis_metaproxy/securonis_metaproxy.conf
+
+[Install]
+WantedBy=multi-user.target
+
+
